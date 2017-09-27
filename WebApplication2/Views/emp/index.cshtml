@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication2.Models.employe>
+@{
+        Layout = null;
+    }
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.employename)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employeemailid)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.employename)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.employeaddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.employeemailid)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+</body>
+</html>
+
+
+
+
+
+   
+

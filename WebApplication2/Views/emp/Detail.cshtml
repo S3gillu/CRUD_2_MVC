@@ -1,0 +1,54 @@
+﻿@model  WebApplication2.Models.employe
+@{
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>demo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <h4>employe</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.employename)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.employename)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.employeaddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.employeaddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.employeemailid)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.employeemailid)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>  
+</body>
+</html>
+
